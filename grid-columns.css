@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: [line-1]200px [line-2]100px [line-3]300px [line-4]200px [line-end]200px;
+    grid-template-rows: 200px 100px 200px;
+}
+
+.item {
+    border: 1px solid red;
+    counter-increment: item;
+}
+
+.item::before {
+    content:counter(item);
+}
